@@ -8,6 +8,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
@@ -71,6 +72,16 @@ public class RadioButton_CheckBox_Demo extends Application {
         // Setup the stage and put the scene on it
         primaryStage.setTitle("Radio Buttons and Check Boxes");
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
+    }
+
+    @Override
+    public void stop() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Close Event");
+        alert.setHeaderText(null);
+        alert.setContentText("So long and thanks for all the fish");
+        alert.showAndWait();
     }
 }

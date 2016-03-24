@@ -102,5 +102,4 @@ public class SliderDemo extends Application {
 
         circle.setFill(newColor);
     }
-
 }
