@@ -1,8 +1,8 @@
-package p2;
+package p1;
 
 /*
  * Created by emailman on 3/22/2016.
- * Button handlers are inner classes
+ * Button handlers are external classes
  */
 
 import javafx.application.Application;
@@ -15,7 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Demo2 extends Application {
+public class ButtonHandlerDemo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -40,34 +40,30 @@ public class Demo2 extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+}
 
-    class UpHandler implements EventHandler<ActionEvent> {
+class UpHandler implements EventHandler<ActionEvent> {
 
-        @Override
-        public void handle(ActionEvent event) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Button Event");
-            alert.setHeaderText(null);
-            alert.setContentText("UP Button Pressed");
+    @Override
+    public void handle(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Button Event");
+        alert.setHeaderText(null);
+        alert.setContentText("UP Button Pressed");
 
-            alert.showAndWait();
-        }
-    }
-
-    class DownHandler implements EventHandler<ActionEvent> {
-
-        @Override
-        public void handle(ActionEvent event) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Button Event");
-            alert.setHeaderText(null);
-            alert.setContentText("DOWN Button Pressed");
-
-            alert.showAndWait();
-        }
+        alert.showAndWait();
     }
 }
 
+class DownHandler implements EventHandler<ActionEvent> {
 
+    @Override
+    public void handle(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Button Event");
+        alert.setHeaderText(null);
+        alert.setContentText("DOWN Button Pressed");
 
-
+        alert.showAndWait();
+    }
+}
